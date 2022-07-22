@@ -1,7 +1,7 @@
 # yoyo-friends
 ## General description
 
-This project is the result of my journey on [Start2Impact](https://www.start2impact.it/). I'm currently practicing in Vue.js.
+This project is the result of my journey on [Start2Impact](https://www.start2impact.it/). I'm currently practicing in ***Vue.js***.
 
 In the **Homepage** you can find a list of videos, listed by their name and author(s).
 
@@ -26,7 +26,7 @@ I might have left some other unresolved problems along the path, since when I fi
 Feel free to contact me if you notice anything could work better. 
 
 ## Credits
-All the icons featured in the project were found on [Icons8](https://icons8.com/), including the Favicon.
+All the icons featured in the project were found on [**Icons8**](https://icons8.com/), including the Favicon.
 
 The fonts used are [**Afternoon coffee**](https://www.fontspace.com/afternoon-coffee-font-f46615), which I found on [FontSpace](https://www.fontspace.com/) (*amazing website, how did I not know that it existed??*), and [**Simple Print**](http://www.peter-wiegel.de/index.html), from [DaFont](https://www.dafont.com/it/).
 

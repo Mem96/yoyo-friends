@@ -1,17 +1,19 @@
 <template>
-  <div>
-    <input class='searchBar' ref='searchBar' v-model='this.searchedItem' @keyup.enter="this.filterListandPress" @focus="this.noActiveSearch = true" @input='this.filterList'>
-    <button @click='this.filterListandPress'></button>
+  <div class='homepage-container'>
+    <div>
+      <input class='searchBar' ref='searchBar' v-model='this.searchedItem' @keyup.enter="this.filterListandPress" @focus="this.noActiveSearch = true" @input='this.filterList'>
+      <button @click='this.filterListandPress'></button>
+    </div>
+    <ul>
+      <span v-if='this.noResults'>Sorry, couldn't find any result for this keyword</span>
+      <li v-show='!this.noActiveSearch' v-for='video in showOnSearch' :key='video.id'>
+        <video-list-element :videoData="video"></video-list-element>
+      </li>
+      <li v-show='this.noActiveSearch' v-for='video in videosList' :key='video.id'>
+        <video-list-element :videoData="video"></video-list-element>
+      </li>
+    </ul>
   </div>
-  <ul>
-    <span v-if='this.noResults'>Sorry, couldn't find any result for this keyword</span>
-    <li v-show='!this.noActiveSearch' v-for='video in showOnSearch' :key='video.id'>
-      <video-list-element :videoData="video"></video-list-element>
-    </li>
-    <li v-show='this.noActiveSearch' v-for='video in videosList' :key='video.id'>
-      <video-list-element :videoData="video"></video-list-element>
-    </li>
-  </ul>
 </template>
 
 <script>
@@ -118,6 +120,14 @@ export default {
   button:active{
     background-color: #EDAE49;
   }
+  .homepage-container{
+      background-image: url('../assets/images/background-image.png');
+      background-size: auto 85vh;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center center;
+      height: 100vh;
+    }
 
   @media only screen and (min-width: 900px){
      ul{
@@ -146,6 +156,10 @@ export default {
      }
      button:hover{
       background-color: #EDAE49
+     }
+     .homepage-container{
+      background-size: 40vw auto;
+      background-position: bottom;
      }
   }
 </style>
