@@ -28,6 +28,8 @@ Feel free to contact me if you notice anything could work better.
 ## Credits
 All the icons featured in the project were found on [**Icons8**](https://icons8.com/), including the Favicon.
 
+The images can be found on [Pixabay](https://pixabay.com/) (background picture) and [PNGTree](https://pngtree.com/) (404 picture).
+
 The fonts used are [**Afternoon coffee**](https://www.fontspace.com/afternoon-coffee-font-f46615), which I found on [FontSpace](https://www.fontspace.com/) (*amazing website, how did I not know that it existed??*), and [**Simple Print**](http://www.peter-wiegel.de/index.html), from [DaFont](https://www.dafont.com/it/).
 
 ## Project setup
