@@ -11,6 +11,7 @@
         :height=200
         @ready='this.createDurationBar'
         @error='()=>{alert("An error has occured.")}'
+        @state-change='this.playOrPauseManagement'
     />
     </div>
     <div class='controls'>
@@ -92,12 +93,8 @@ export default defineComponent({
         onPlayOrPause() {
             if (this.activeState == true){
                 this.$refs.youtube.pauseVideo()
-                this.activeState = false
-                this.$refs.playBtn.classList.toggle('pause')
             } else {
                 this.$refs.youtube.playVideo()
-                this.activeState = true
-                this.$refs.playBtn.classList.toggle('pause')
             }
         },
         onMute(){
@@ -111,6 +108,15 @@ export default defineComponent({
                 this.muteState = false;
                 this.$refs.muteBtn.classList.toggle('unmute')
             }
+        },
+        playOrPauseManagement(){
+            if (this.activeState == true){
+                this.activeState = false
+                this.$refs.playBtn.classList.toggle('pause')
+            } else {
+                this.activeState = true
+                this.$refs.playBtn.classList.toggle('pause')
+            }            
         },
         timeGo(seconds){
             // moves through time in the video
