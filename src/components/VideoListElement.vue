@@ -1,12 +1,12 @@
 <template>
-   
+
     <router-link :to="{name:'video', params: {id: videoData.youtubeId, title: videoData.title, author: videoData.author}}">
          <div>
         <h1>{{videoData.title}}</h1>
         <h2>{{videoData.author}}</h2>
         </div>
     </router-link>
-      
+
 </template>
 <script>
 export default {

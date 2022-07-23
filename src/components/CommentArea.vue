@@ -7,7 +7,7 @@
                     <p class='comment-content'>{{singleComment.commentText}}</p>
                 </div>
             </div>
-        </div> 
+        </div>
         <form>
             <div class='form-bars'>
                 <input class='username-bar' :placeholder="this.usernamePlaceholder" v-model='this.newComment.username'>
@@ -15,8 +15,8 @@
                 <textarea class='comment-bar' :placeholder="this.commentPlaceholder" v-model='this.newComment.commentText'></textarea>
                 <button @click.prevent='this.onSubmit'></button>
             </div>
-        </form> 
-    </div>  
+        </form>
+    </div>
 </template>
 <script setup>
     import {useCommentsStore} from '@/store/comments'
@@ -179,7 +179,7 @@ form{
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
-    
+
 }
 button{
     border: 2px rgb(226, 231, 232) ridge;

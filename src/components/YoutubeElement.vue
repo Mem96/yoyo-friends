@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class='video-container'>
-    <YouTube 
+    <YouTube
         :src='this.src'
         ref="youtube"
         id='youtube'
@@ -102,7 +102,7 @@ export default defineComponent({
                 this.$refs.youtube.mute();
                 this.muteState = true;
                 this.$refs.muteBtn.classList.toggle('unmute')
-                
+
             } else {
                 this.$refs.youtube.unMute();
                 this.muteState = false;
@@ -116,11 +116,11 @@ export default defineComponent({
             } else {
                 this.activeState = true
                 this.$refs.playBtn.classList.toggle('pause')
-            }            
+            }
         },
         timeGo(seconds){
             // moves through time in the video
-            this.currentTimeInSec = this.currentTimeInSec + Number(seconds);  
+            this.currentTimeInSec = this.currentTimeInSec + Number(seconds);
             this.$refs.youtube.seekTo(this.currentTimeInSec);
         },
         clearThisInterval(){
